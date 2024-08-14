@@ -20,9 +20,9 @@ export const createMenuItemsTable = async() => {
     "(id integer primary key not null, name text, price text, " +
     "description text, image text, category text)";
 
-  //await db.runAsync(query);
-  //const listTables = await db.getFirstAsync("SELECT name FROM sqlite_master WHERE type='table';")
-  //console.log("DB tables: ", listTables);
+  await db.runAsync(query);
+  const listTables = await db.getFirstAsync("SELECT name FROM sqlite_master WHERE type='table';")
+  console.log("DB tables: ", listTables);
 }
 
 export const getAllMenuItems = async() => {
